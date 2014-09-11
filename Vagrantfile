@@ -10,8 +10,8 @@ sudo apt-get install -y libmysqlclient-dev
 sudo apt-get install -y ruby-dev
 sudo apt-get install -y make
 sudo update-rc.d mysql defaults
-su - vagrant -c '\curl -sSL https://get.rvm.io | bash -s stable'
-su - vagrant -c '\curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles'
+su - vagrant -c 'curl -sSL https://get.rvm.io | bash -s stable'
+su - vagrant -c 'curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles'
 su - vagrant -c 'rvm install 2.1'
 su - vagrant -c 'rvm use 2.1 --default'
 cd /vagrant
