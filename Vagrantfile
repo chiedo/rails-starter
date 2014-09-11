@@ -30,6 +30,8 @@ then
 
     echo "CREATE USER 'root'@'%' IDENTIFIED BY 'root';" | mysql -uroot -proot
     #make mysql listen to connections from the outside
+    echo "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;" | mysql -uroot -proot
+    echo "FLUSH PRIVILEGES;" | mysql -uroot -proot
     sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/my.cnf
     sudo service mysql restart
 
