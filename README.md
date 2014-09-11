@@ -1,4 +1,5 @@
 Local Development Environment
+* Be sure to remove the .git directory after you have downloaded this repo.
 - Requirements: Vagrant and Virtual Box
 - Run 'vagrant up' whenever you want to launch the environment.
 - Run 'vagrant halt' to shut down the environment.
