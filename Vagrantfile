@@ -10,7 +10,6 @@ sudo apt-get install -y libmysqlclient-dev
 sudo apt-get install -y ruby-dev
 sudo apt-get install -y make
 sudo update-rc.d mysql defaults
-sudo service mysql start
 \curl -sSL https://get.rvm.io | bash -s stable
 \curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles
 rvm install 2.1
@@ -32,6 +31,7 @@ then
     echo "CREATE USER 'root'@'%' IDENTIFIED BY 'root';" | mysql -uroot -proot
     #make mysql listen to connections from the outside
     sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/my.cnf
+    sudo service mysql restart
 
     touch /var/log/databasesetup
 
