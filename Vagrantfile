@@ -17,9 +17,6 @@ su - vagrant -c 'rvm use 2.1 --default'
 cd /vagrant
 su - vagrant -c 'sudo gem install bundler'
 su - vagrant -c 'sudo gem install rails'
-cd /vagrant
-su - vagrant -c 'sudo bundle install'
-su - vagrant -c 'sudo bundle update'
 cd
 
 if [ ! -f /var/log/databasesetup ];
