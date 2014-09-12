@@ -7,6 +7,7 @@ sudo debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password_aga
 sudo apt-get update
 sudo apt-get -y install mysql-server-5.5
 sudo apt-get install -y libmysqlclient-dev
+sudo apt-get install -y libxslt-dev libxml2-dev
 sudo apt-get install -y ruby-dev
 sudo apt-get install -y make
 sudo update-rc.d mysql defaults
