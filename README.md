@@ -1,12 +1,29 @@
-Local Development Environment
-* Be sure to remove the .git directory after you have downloaded this repo.
-- Requirements: Vagrant and Virtual Box
-- Run 'vagrant up' whenever you want to launch the environment.
-- Run 'vagrant halt' to shut down the environment.
-- Run 'vagrant destroy' to completely destroy the environment. Your application will still remain.
-- Run 'vagrant ssh' to connect to the virtual machine hosting your development environment. Within the virtual machine. Your application can be found at /vagrant. You can either do git pushes and pulls from within the virtual machine or from your local machine within your app. Both vagrant and your local machine share the application folder even though they use different file paths.
-- navigate to /vagrant in your vm to get to your rails app and run 'sudo bundle install' and 'sudo gem install rails' or whatever you must.
--- You can access your vagrant virtual machine's rails app (when you have started it within the rails app in your vagrant virtual machine) at port at local host 3001 in your browser and can access your vagrant virtual machine's mysql server at port 5433 at localhost. 
--- Your mysql credentials will be username: root, password: root. Their will be three databases set up, rails_app_test, rails_app_development and rails_app_production.
-- You will need to update the config/database.yml file from within your app.
-- You will need to download a live copy of the database to start and import it into the railsapp_development database if a sample data set by the name of 'data/initial.sql' is not provided.
+-vagrant-starter
+=========
+A vagrant environment for starting rails projects.
+
+
+> Requirements: Vagrant and Virtual Box
+
+> It will be assumed that you are familiar with vagrant.
+
+> ####Local Mysql port: 5433
+
+> ####Local http port: 3001
+
+> ####Mysql username: root
+
+> ####Mysql password: root
+
+> ####Existing databases: rails_app_development, rails_app_test, rails_app_production
+
+
+- Once inside your vagrant virtual machine, navigate to /vagrant and you are ready to start your rails app by running the following:
+```
+gem install rails
+rails new app_name
+```
+###Notes:
+>* If you have an issue with mysql not connecting, you may need to restart mysql by running 'sudo service mysql restart'
+>* Be sure to delete the .git folder after cloning this repo if you intend to use it for a completely unrelated project.
+
