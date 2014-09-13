@@ -1,4 +1,4 @@
--vagrant-starter
+Rails-vagrant-starter
 =========
 A vagrant environment for starting rails projects.
 
