@@ -28,5 +28,11 @@ rails new app_name
 >* Be sure to delete the .git folder after cloning this repo if you intend to use it for a completely unrelated project.
 
 ###Notes for elastic beanstalk users:
->* You should do all of your elastic beanstalk interaction via the vagrant VM. You should only need to run 'eb init' if you are the first person who hooks up the repository to Elastic Beanstalk. After you do this, make sure .elasticbeanstalk/ and .ebextensions/ ARE NOT in .gitignore.
->* Everyone who intends to push changes to Elastic Beanstalk will need to set up their AWS credential file at '/home/vagrant/.elasticbeanstalk/aws_credential_file'.
+>* Before doing any Elastic Beanstalk interaction, be sure that you have initialized the git repo
+>* You should do all of your elastic beanstalk interaction via the vagrant VM.
+>* Before you can push to Elastic Beanstalk for the first time, you will need to navigate to /vagrant then run the following
+```
+eb init
+```
+>* After you do this, make sure .elasticbeanstalk/ and .ebextensions/ ARE NOT in .gitignore.
+
