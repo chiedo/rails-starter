@@ -49,7 +49,7 @@ then
   unzip AWS-ElasticBeanstalk-CLI-2.6.3.zip
   rm AWS-ElasticBeanstalk-CLI-2.6.3.zip
   echo 'export PATH="$PATH:/home/vagrant/AWS-ElasticBeanstalk-CLI-2.6.3/eb/linux/python2.7"' | sudo tee -a /home/vagrant/.bashrc
-  touch /var/log/ebsetup
+  sudo touch /var/log/ebsetup
 fi
 
 
