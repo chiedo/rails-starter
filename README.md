@@ -27,3 +27,6 @@ rails new app_name
 >* If you have an issue with mysql not connecting, you may need to restart mysql by running 'sudo service mysql restart'
 >* Be sure to delete the .git folder after cloning this repo if you intend to use it for a completely unrelated project.
 
+###Notes for elastic beanstalk users:
+>* You should do all of your elastic beanstalk interaction via the vagrant VM. You should only need to run 'eb init' if you are the first person who hooks up the repository to Elastic Beanstalk. After you do this, make sure .elasticbeanstalk/ and .ebextensions/ ARE NOT in .gitignore.
+>* Everyone who intends to push changes to Elastic Beanstalk will need to set up their AWS credential file at '/home/vagrant/.elasticbeanstalk/aws_credential_file'.
