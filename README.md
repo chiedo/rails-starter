@@ -29,7 +29,7 @@ rails new app_name
 
 ###Notes for elastic beanstalk users:
 >* Before doing any Elastic Beanstalk interaction, be sure that you have initialized the git repo
->* You should do all of your elastic beanstalk interaction via the vagrant VM.
+>* You should do all of your elastic beanstalk interaction via the vagrant VM. All of your git commands other than 'git aws.push' should be run on your local machine.
 >* Before you can push to Elastic Beanstalk for the first time, you will need to navigate to /vagrant then run the following
 ```
 eb init
