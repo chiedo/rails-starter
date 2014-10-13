@@ -4,7 +4,10 @@ VAGRANTFILE_API_VERSION = "2"
 $script = <<SCRIPT
 sudo debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password password root'
 sudo debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password_again password root'
+sudo apt-get install -y python-software-properties software-properties-common
+sudo add-apt-repository -y ppa:pi-rho/dev
 sudo apt-get update
+sudo apt-get install -y tmux=1.9a-1~ppa1~t
 sudo apt-get -y install mysql-server-5.5
 sudo apt-get -y install unzip
 sudo apt-get install -y libmysqlclient-dev
