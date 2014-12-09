@@ -1,6 +1,6 @@
 Rails-vagrant-starter
 =========
-A vagrant environment for starting rails projects.
+A vagrant environment for starting rails projects. (EXPERIMENTAL)
 
 
 > Requirements: Vagrant and Virtual Box
@@ -21,7 +21,7 @@ A vagrant environment for starting rails projects.
 - Once inside your vagrant virtual machine, navigate to /vagrant and you are ready to start your rails app by running the following:
 ```
 gem install rails
-rails new app_name
+rails new .
 ```
 ###Notes:
 >* If you have an issue with mysql not connecting, you may need to restart mysql by running 'sudo service mysql restart'
