@@ -26,6 +26,7 @@ rails new .
 ###Notes:
 >* If you have an issue with mysql not connecting, you may need to restart mysql by running 'sudo service mysql restart'
 >* Be sure to delete the .git folder after cloning this repo if you intend to use it for a completely unrelated project.
+>* If you have issue connecting to mysql via port 5433, then go through an ssh tunnel using (ssh-username 'vagrant', ssh-password 'vagrant', port '2222' then the mysql credentials above except with the standard port of 3306)
 
 ###Notes for elastic beanstalk users:
 >* Install Elastic Beanstalk command line tools. If using a mac, you can use homebrew and use the following:

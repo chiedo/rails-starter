@@ -49,7 +49,19 @@ fi
 if [ ! -f /var/log/devenv ];
 then
   cd
+  #RAILS
   echo 'export RAILS_ENV="development"' | sudo tee -a /home/vagrant/.bashrc
+  #MYSQL
+  echo 'export MYSQL_DATABASE="django_app_default"' | sudo tee -a /home/vagrant/.bashrc
+  echo 'export MYSQL_USERNAME="root"' | sudo tee -a /home/vagrant/.bashrc
+  echo 'export MYSQL_PASSWORD="root"' | sudo tee -a /home/vagrant/.bashrc
+  echo 'export MYSQL_HOSTNAME="127.0.0.1"' | sudo tee -a /home/vagrant/.bashrc
+  echo 'export MYSQL_PORT=3306' | sudo tee -a /home/vagrant/.bashrc
+  # AWS
+  echo 'export AWS_ACCESS_KEY_ID="NONE"' | sudo tee -a /home/vagrant/.bashrc
+  echo 'export AWS_SECRET_ACCESS_KEY="NONE"' | sudo tee -a /home/vagrant/.bashrc
+  echo 'export AWS_STORAGE_BUCKET_NAME="NONE"' | sudo tee -a /home/vagrant/.bashrc
+  echo 'export AWS_S3_BUCKETLESS_DOMAIN="NONE"' | sudo tee -a /home/vagrant/.bashrc
   touch /var/log/devenv
 fi
 
