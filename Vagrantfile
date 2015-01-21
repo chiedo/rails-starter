@@ -52,7 +52,7 @@ then
   #RAILS
   echo 'export RAILS_ENV="development"' | sudo tee -a /home/vagrant/.bashrc
   #MYSQL
-  echo 'export MYSQL_DATABASE="django_app_default"' | sudo tee -a /home/vagrant/.bashrc
+  echo 'export MYSQL_DATABASE="rails_app_default"' | sudo tee -a /home/vagrant/.bashrc
   echo 'export MYSQL_USERNAME="root"' | sudo tee -a /home/vagrant/.bashrc
   echo 'export MYSQL_PASSWORD="root"' | sudo tee -a /home/vagrant/.bashrc
   echo 'export MYSQL_HOSTNAME="127.0.0.1"' | sudo tee -a /home/vagrant/.bashrc
