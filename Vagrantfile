@@ -16,8 +16,9 @@ sudo apt-get install -y libxslt-dev libxml2-dev
 sudo apt-get install -y ruby-dev
 sudo apt-get install -y make
 sudo update-rc.d mysql defaults
-su - vagrant -c 'curl -sSL https://get.rvm.io | bash -s stable'
-su - vagrant -c 'curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles'
+su - vagrant -c 'gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3'
+su - vagrant -c '\curl -sSL https://get.rvm.io | bash -s stable'
+su - vagrant -c 'source "/home/vagrant/.rvm/scripts/rvm"'
 su - vagrant -c 'rvm install 2.1'
 su - vagrant -c 'rvm use 2.1 --default'
 cd /vagrant
@@ -49,6 +50,8 @@ fi
 if [ ! -f /var/log/devenv ];
 then
   cd
+  #RVM
+  echo 'source /home/vagrant/.rvm/scripts/rvm"' | sudo tee -a /home/vagrant/.bashrc
   #RAILS
   echo 'export RAILS_ENV="development"' | sudo tee -a /home/vagrant/.bashrc
   #MYSQL
