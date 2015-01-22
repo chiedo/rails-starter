@@ -2,7 +2,7 @@ Rails-vagrant-starter
 =========
 A vagrant environment for starting rails projects. (EXPERIMENTAL)
 
-
+hello
 > Requirements: Vagrant and Virtual Box
 
 > It will be assumed that you are familiar with vagrant.
