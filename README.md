@@ -19,7 +19,7 @@ A vagrant environment for starting rails projects. (EXPERIMENTAL)
 
 - Once inside your vagrant virtual machine, navigate to /vagrant and you are ready to start your rails app by running the following:
 ```
-sudo gem install rails
+:x
 rails new .
 ```
 ###Notes:

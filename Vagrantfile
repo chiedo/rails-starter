@@ -15,6 +15,7 @@ sudo apt-get install -y libmysqlclient-dev
 sudo apt-get install -y libxslt-dev libxml2-dev
 sudo apt-get install -y ruby-dev
 sudo apt-get install -y make
+sudo apt-get install -y nodejs
 sudo update-rc.d mysql defaults
 su - vagrant -c 'gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3'
 su - vagrant -c '\curl -sSL https://get.rvm.io | bash -s stable'
