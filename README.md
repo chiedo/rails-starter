@@ -19,6 +19,13 @@ A vagrant environment for starting rails projects. (EXPERIMENTAL)
 
 - Once inside your vagrant virtual machine, navigate to /vagrant and you are ready to start your rails app by running the following:
 ```
+gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
+\curl -L https://get.rvm.io | bash -s stable --ruby
+source "/home/vagrant/.rvm/scripts/rvm"
+rvm install 2.1
+rvm use 2.1 --default
+cd /vagrant
+sudo gem install bundler
 sudo gem install rails --no-ri --no-rdoc
 rails new .
 ```
