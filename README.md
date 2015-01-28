@@ -1,6 +1,5 @@
 Rails-vagrant-starter
 =========
-A vagrant environment for starting rails projects.
 
 READ THIS FIRST (DO NOT IGNORE): https://gist.github.com/chiedojohn/c3e37041b829f28c0c78
 ----------
@@ -17,8 +16,6 @@ rvm install 2.1
 rvm use 2.1 --default
 cd /vagrant
 sudo gem install bundler
-sudo gem install rails
-rails new .
-sudo gem install rails
+sudo gem install rails --no-ri --no-rdoc
 rails new .
 ```

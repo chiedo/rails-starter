@@ -16,6 +16,7 @@ sudo apt-get install -y libmysqlclient-dev
 sudo apt-get install -y libxslt-dev libxml2-dev
 sudo apt-get install -y ruby-dev
 sudo apt-get install -y make
+sudo apt-get install -y nodejs
 sudo update-rc.d mysql defaults
 touch ~/.gemrc
 sudo touch /root/.gemrc
