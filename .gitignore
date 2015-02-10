@@ -1,2 +1,6 @@
 .vagrant
 public/assets
+tmp/
+example-app/public/assets
+example-app/tmp
+log/

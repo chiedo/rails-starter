@@ -27,6 +27,9 @@ then
     echo "CREATE DATABASE app_test" | mysql -uroot -proot
     echo "CREATE DATABASE app_development" | mysql -uroot -proot
     echo "CREATE DATABASE app_production" | mysql -uroot -proot
+    echo "CREATE DATABASE example_app_test" | mysql -uroot -proot
+    echo "CREATE DATABASE example_app_development" | mysql -uroot -proot
+    echo "CREATE DATABASE example_app_production" | mysql -uroot -proot
 
     echo "CREATE USER 'root'@'%' IDENTIFIED BY 'root';" | mysql -uroot -proot
     #make mysql listen to connections from the outside
@@ -51,12 +54,6 @@ then
   echo 'export RAILS_ENV="development"' | sudo tee -a /home/vagrant/.bashrc
   echo 'gem: --no-rdoc --no-ri' | sudo tee -a /home/vagrant/.gemrc
   echo 'gem: --no-rdoc --no-ri' | sudo tee -a /root/.gemrc
-  #MYSQL
-  echo 'export MYSQL_DATABASE="app_default"' | sudo tee -a /home/vagrant/.bashrc
-  echo 'export MYSQL_USERNAME="root"' | sudo tee -a /home/vagrant/.bashrc
-  echo 'export MYSQL_PASSWORD="root"' | sudo tee -a /home/vagrant/.bashrc
-  echo 'export MYSQL_HOSTNAME="127.0.0.1"' | sudo tee -a /home/vagrant/.bashrc
-  echo 'export MYSQL_PORT=3306' | sudo tee -a /home/vagrant/.bashrc
   # AWS
   echo 'export AWS_ACCESS_KEY_ID="NONE"' | sudo tee -a /home/vagrant/.bashrc
   echo 'export AWS_SECRET_ACCESS_KEY="NONE"' | sudo tee -a /home/vagrant/.bashrc
