@@ -27,3 +27,7 @@ rails new .
 When running rails
 -----------
 You will need to run "rails s -b 0.0.0.0" to make sure the rails app is accessible outside of Vagrant
+
+Testing
+-----------
+- See https://github.com/rspec/rspec-rails for the basics.
