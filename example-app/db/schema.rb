@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150219184533) do
+ActiveRecord::Schema.define(version: 20150219191504) do
 
   create_table "cars", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.text     "description", limit: 65535
-    t.decimal  "price",                     precision: 10
+    t.string   "name",        limit: 255,                  null: false
+    t.text     "description", limit: 65535,                null: false
+    t.decimal  "price",                     precision: 10, null: false
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
   end
