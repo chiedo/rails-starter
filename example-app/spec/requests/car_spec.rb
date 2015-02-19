@@ -20,7 +20,7 @@ describe "Cars API" do
 
       # Make sure the data matches what is expected
       expect(car_names).to match_array(["Toyota Supra",
-                                           "Lancer Evolution"])
+                                        "Lancer Evolution"])
     end
   end
 

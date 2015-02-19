@@ -8,7 +8,7 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
-  config.before(:all) do
+  config.before :all do
     FactoryGirl.reload
   end
 
