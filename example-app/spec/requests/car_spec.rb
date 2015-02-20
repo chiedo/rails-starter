@@ -1,5 +1,7 @@
 # spec/requests/cars_spec.rb
-describe "Cars API" do
+require 'rails_helper'
+
+RSpec.describe "Cars API", :type => :request do
   describe "GET {scope}/cars" do
     it "returns all the cars" do
       # Create two cars in the test database. see spec/factories.rb to see defaults
