@@ -11,10 +11,10 @@ development:
   # Database was not set as an environment variable so you could have multiple projects on the same server locally
   # No harm in hard coding the database name in each project for development purposes.
   database: example_app_development
-  username: ENV["MYSQL_USERNAME"]
-  password: ENV["MYSQL_PASSWORD"]
-  host: ENV["MYSQL_HOST"]
-  port: ENV["MYSQL_PORT"]
+  username: <%= ENV["MYSQL_USERNAME"] %>
+  password: <%= ENV["MYSQL_PASSWORD"] %>
+  host: <%= ENV["MYSQL_HOST"] %>
+  port: <%= ENV["MYSQL_PORT"] %>
 
 #test:
   #<<: *default
