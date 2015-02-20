@@ -8,11 +8,28 @@ default: &default
 
 development:
   <<: *default
+  # Database was not set as an environment variable so you could have multiple projects on the same server locally
+  # No harm in hard coding the database name in each project for development purposes.
   database: example_app_development
+  username: ENV["MYSQL_USERNAME"]
+  password: ENV["MYSQL_PASSWORD"]
+  host: ENV["MYSQL_HOST"]
+  port: ENV["MYSQL_PORT"]
 
+#test:
+  #<<: *default
+  #database: example_app_test
+
+# Your rspec tests will run faster with this option set as they will run in ram. Obviously, they won't be running on the
+# same adapter as your live code base so you can make the decision for yourself on if it is worth the trade off. In most
+# cases, this is the way to go. You may use the above instead though if you decide that you want the identical test
+# environment that the above can provide you with.
+
+# tests
 test:
-  <<: *default
-  database: example_app_test
+  adapter: sqlite3
+  database: ":memory:"
+  verbosity: quiet
 
 production:
   <<: *default

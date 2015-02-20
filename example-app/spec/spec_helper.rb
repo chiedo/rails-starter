@@ -12,7 +12,7 @@ RSpec.configure do |config|
     FactoryGirl.reload
   end
 
-  # Database cleaner: to ensure that the test database is cleaned after each test
+  # Database cleaner: to ensure that the test database is cleaned after each test.
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
   end
@@ -32,6 +32,4 @@ RSpec.configure do |config|
   config.after(:each) do
     DatabaseCleaner.clean
   end
-
-
 end

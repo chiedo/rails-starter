@@ -36,3 +36,11 @@ group :development, :test do
   gem 'database_cleaner', '~> 1.4.0'
 end
 
+group :test do
+  # For if you choose to run your tests using an in-memory database.
+  # You may or may not use this but doesn't hurt to have it here.
+  gem 'sqlite3'
+  # Needed to make sqlite in-memory work smoothly
+  gem 'memory_test_fix'
+end
+
