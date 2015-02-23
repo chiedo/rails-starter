@@ -2,6 +2,10 @@
 require "rails_helper"
 
 RSpec.describe Car, :type => :model do
+  # When creating your tests, you can add lots of lines like the following to remind yourself of the
+  # tests you need to write.
+  # pending("Need to write tests for A")
+  # pending("Need to write tests for B")
   context "Upon creation" do
     it "is successfully created if the correct arguments are passed" do
       # We aren't using factory girl for testing the models. For models, we want to be verbose
@@ -70,6 +74,16 @@ RSpec.describe Car, :type => :model do
       expect(car.description).to eq "Updated desc"
       car.price = 10000
       expect(car.price).to eq 10000
+    end
+  end
+  context "When attempting to delete a car" do
+    it "is deleted" do
+      car = FactoryGirl.create(:car)
+      number_of_cars = Car.all().length
+      expect(number_of_cars).to eq 1
+      car.destroy
+      number_of_cars = Car.all().length
+      expect(number_of_cars).to eq 0
     end
   end
 end
