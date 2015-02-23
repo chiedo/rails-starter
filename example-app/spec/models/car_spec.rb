@@ -14,4 +14,8 @@ RSpec.describe Car, :type => :model do
   it "is invalid without a price" do
     expect(FactoryGirl.build(:car, price: nil)).to_not be_valid
   end
+  it "returns the name and price as a string" do
+    car = FactoryGirl.create(:car, name: "Acura", price: 100.00)
+    expect(car.name_and_price).to eq "Acura - $100"
+  end
 end
