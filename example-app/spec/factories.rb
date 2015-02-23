@@ -1,7 +1,9 @@
+require 'faker'
+
 FactoryGirl.define do
   factory :car do
-    name "Acura Integra"
-    description  "A super sweet car."
-    price  3000.00
+    name Faker::Name.name
+    description  Faker::Lorem.paragraph
+    price  Faker::Commerce.price
   end
 end

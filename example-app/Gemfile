@@ -35,6 +35,9 @@ group :development, :test do
   # provides a framework and DSL for defining and using factories - less error-prone, more explicit, and all-around easier to work with than fixtures.
   gem 'factory_girl', '~> 4.5.0'
 
+  # Generates fake data for tests
+  gem 'faker', '~> 1.4.3'
+
   # For cleaning out the database
   gem 'database_cleaner', '~> 1.4.0'
 end
