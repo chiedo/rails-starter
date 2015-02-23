@@ -39,4 +39,14 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  config.generators do |g|
+    g.test_framework :rspec,
+      :fixtures => true,
+      :view_specs => false, # Shouldn't really need these. We'll use selenium
+      :helper_specs => false, # Add as needed
+      :routing_specs => true,
+      :controller_specs => true,
+      :request_specs => true
+    g.fixture_replacement :factory_girl, :dir => "spec/factories"
+  end
 end

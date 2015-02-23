@@ -4,7 +4,8 @@ RSpec.describe CarsController, type: :controller do
   # https://www.launchacademy.com/codecabulary/learn-test-driven-development/rspec/before-vs-let
 
 
-  # Attributes that will prevent a creation or update of a car
+  # Attributes that will prevent a creation or update of a car. Needs to contain the actual
+  # parameters being expected. Just with bad data.
   let(:invalid_attributes) {
     { name: nil, description: nil, price: "string" }
   }
