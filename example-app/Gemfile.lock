@@ -183,6 +183,7 @@ DEPENDENCIES
   memory_test_fix
   mysql2
   rails (= 4.2.0)
+  rspec-mocks (~> 3.2.0)
   rspec-rails (~> 3.2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

@@ -9,6 +9,7 @@ RSpec.describe "Cars API", :type => :request do
       FactoryGirl.create(:car, name: "Lancer Evolution")
 
       # Simulate the visiting of the url /cars
+      #get url_for(:controller => 'cars', :action => 'index'), {}, { "Accept" => "application/json" }
       get url_for(:controller => 'cars', :action => 'index'), {}, { "Accept" => "application/json" }
       
       # The response should be 200 meaning that everything was OK
