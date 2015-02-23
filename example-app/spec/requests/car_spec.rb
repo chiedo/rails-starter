@@ -2,15 +2,16 @@
 require 'rails_helper'
 
 RSpec.describe "Cars API", :type => :request do
-  describe "GET {scope}/cars" do
+  scope = "/api"
+
+  describe "GET #{scope}/cars" do
     it "returns all the cars" do
       # Create two cars in the test database. see spec/factories.rb to see defaults
       FactoryGirl.create(:car, name: "Toyota Supra")
       FactoryGirl.create(:car, name: "Lancer Evolution")
 
       # Simulate the visiting of the url /cars
-      #get url_for(:controller => 'cars', :action => 'index'), {}, { "Accept" => "application/json" }
-      get url_for(:controller => 'cars', :action => 'index'), {}, { "Accept" => "application/json" }
+      get "#{scope}/cars"
       
       # The response should be 200 meaning that everything was OK
       expect(response.status).to eq 200
@@ -27,11 +28,11 @@ RSpec.describe "Cars API", :type => :request do
     end
   end
 
-  describe "GET {scope}/cars/:id" do
+  describe "GET #{scope}/cars/:id" do
     it "returns a requested car" do
       m = FactoryGirl.create(:car, name: "Ford Explorer")
 
-      get url_for(:controller => 'cars', :action => 'show', :id => m.id), {}, { "Accept" => "application/json" }
+      get "#{scope}/cars/#{m.id}"
 
       expect(response.status).to eq 200
 
@@ -40,7 +41,7 @@ RSpec.describe "Cars API", :type => :request do
     end
   end
 
-  describe "POST {scope}/cars" do
+  describe "POST #{scope}/cars" do
     it "creates a car" do
       car_params = {
         "car" => {
@@ -55,7 +56,7 @@ RSpec.describe "Cars API", :type => :request do
         "Content-Type" => "application/json"
       }
 
-      post url_for(:controller => 'cars', :action => 'create'), car_params, request_headers
+      post "#{scope}/cars", car_params, request_headers
 
       expect(response.status).to eq 201 # created
       expect(Car.first.name).to eq "Dodge Caravan"

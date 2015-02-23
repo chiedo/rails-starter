@@ -10,5 +10,5 @@ require 'rails_helper'
 #     end
 #   end
 # end
-RSpec.describe CarsHelper, :type => :helper do
+RSpec.describe CarsHelper, type: :helper do
 end
