@@ -2,22 +2,31 @@ require 'rails_helper'
 
 RSpec.describe StaticPagesController, type: :controller do
   render_views # Necessary to compare the output of the response
-
-  let(:invalid_attributes) { {} }
-
-  let(:valid_session) { {} }
-
-  # Runs before each test.
-  before do
-    # Sign in as a user.
-    # sign_in_as_a_valid_user
+  
+  # This lazily creates a new user if it is needed
+  let :user do
+    FactoryGirl.create(:user, email: "bob@bob.com")
   end
 
   describe "GET #index" do
-    it "The user is not permitted without logging in" do
-      get :index, {}, valid_session
-      puts response.body
-      expect(response.body.include? "You need to sign in or sign up before continuing.").to eq true
+    before :each do
+      # We need to sign in and sign out before each test otherwise devise wil freak out.
+      sign_in user
+      sign_out user
+
+    end
+
+    it "The user is redirected if not logged in" do
+      get :index
+      expect(response).to redirect_to :controller => "devise/sessions", :action => "new"
+    end
+
+    it "The users email displays if logged in" do
+      sign_in user
+      get :index
+
+      # Make sure the users email address gets rendered on the page
+      expect(response.body.include? "bob@bob.com").to eq true
     end
   end
 

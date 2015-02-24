@@ -2,7 +2,9 @@ ENV["RAILS_ENV"] = 'test'
 require "devise"
 
 RSpec.configure do |config|
+  # The following two are needed for devise
   config.include Devise::TestHelpers, type: :controller
+  config.include Warden::Test::Helpers
 
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
