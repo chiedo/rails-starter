@@ -1,3 +1,10 @@
+Comments
+=====================
+- Mocks and stubs
+-- We are using mocha.
+-- You can see an example of a test using stubs in spec/models/car_spec.rb
+-- You can see an example of a test using mocks in spec/helpers/car_helper_spec.rb
+
 Rspec testing resources
 =====================
 - Official Rspec-rails Docs: 
