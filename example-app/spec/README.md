@@ -16,3 +16,5 @@ Rspec testing resources
 --- Notice though that he uses the old "should" style as opoosed to "expect().to"
 - Official mocha Docs:
 -- https://github.com/freerange/mocha
+- Rspec mocha docs:
+-- https://relishapp.com/rspec/rspec-core/v/2-14/docs/mock-framework-integration/mock-with-mocha
