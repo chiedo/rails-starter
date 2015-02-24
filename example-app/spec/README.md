@@ -1,9 +1,26 @@
-Comments
+General
 =====================
-- Mocks and stubs
--- We are using mocha.
--- You can see an example of a test using stubs in spec/models/car_spec.rb
--- You can see an example of a test using mocks in spec/helpers/car_helper_spec.rb
+The code should be commented pretty thouroughly. If anything is unclear, please let me know. The goal of these examples is to make it much easier to start testing with rspec.
+
+Testing concept examples
+=====================
+- Models
+  - spec/models/car_spec.rb
+- Controllers
+  - spec/controllers/cars_controller_spec.rb
+- Helpers
+  - spec/helpers/cars_helper_spec.rb
+- Misc classes
+  - spec/extras/example_custom_class_spec.rb
+- Mocks stubs (mocha)
+  - spec/models/car_spec.rb
+- Mocks (mocha)
+  - spec/helpers/car_helper_spec.rb
+- Devise
+  - spec/controllers/static_pages_controller_spec.rb
+    - Not using the before_action authenticate! option they have. It caused issues with the tests. Writing a filter to the same affect was easy. If you can figure out how to make the tests with before_authenticate work, please be my guest and tell me how.
+- REST API
+  - spec/requests/car_spec.rb
 
 Rspec testing resources
 =====================
