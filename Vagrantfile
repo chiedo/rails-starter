@@ -61,7 +61,7 @@ then
   echo 'export AWS_S3_BUCKETLESS_DOMAIN="NONE"' | sudo tee -a /home/vagrant/.bashrc
   # MYSQL
   echo 'export MYSQL_USERNAME="root"' | sudo tee -a /home/vagrant/.bashrc
-  echo 'export MYSQL_PASSWORD="root"' | sudo tee -a /home/vagrant/.Ã[M#Â
+  echo 'export MYSQL_PASSWORD="root"' | sudo tee -a /home/vagrant/.bashrc
   echo 'export MYSQL_HOST="127.0.0.1"' | sudo tee -a /home/vagrant/.bashrc
   echo 'export MYSQL_PORT="3306"' | sudo tee -a /home/vagrant/.bashrc
   touch /var/log/devenv
