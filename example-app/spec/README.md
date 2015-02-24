@@ -1,6 +1,6 @@
 General
 =====================
-The code should be commented pretty thouroughly. If anything is unclear, please let me know. The goal of these examples is to make it much easier to start testing with rspec.
+The code should be commented pretty thouroughly. If anything is unclear, please let me know. The goal of these examples is to make it much easier to start testing with rspec. These are not perfect tests nor are they exhaustive. You will want to write beter tests than these that covers more test cases. This is a great start though, and the other test cases should be trivial.
 
 Testing concept examples
 =====================
