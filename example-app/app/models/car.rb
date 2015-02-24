@@ -7,4 +7,5 @@ class Car < ActiveRecord::Base
   def name_and_price
     [name, "$" + price.to_s].join " - "
   end
+
 end

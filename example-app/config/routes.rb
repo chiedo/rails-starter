@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   scope :api, :format => false do
     resources :cars, defaults: { format: :json}
   end
+
 end

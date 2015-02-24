@@ -17,14 +17,34 @@ RSpec.describe CarsController, type: :controller do
 
   describe "GET #index" do
     it "assigns all cars as @cars" do
-      car = FactoryGirl.create(:car)
+      # Without stubs
+      #car = FactoryGirl.create(:car)
+      #car_2 = FactoryGirl.create(:car)
+      
+      # With stubs
+      car = FactoryGirl.build(:car) # builds but doesn't save a car
+      car_2 = FactoryGirl.build(:car)
+      # We know that GET #index is going to call Car.all() so that's the function to prevent hitting the database
+      # for no reason, slowing down the tests and needing to create actual cars, insert them in the database and
+      # then get them back from the database. We assume that the Car model is working properly. The Car model tests
+      # are responsible for whether they are in-fact working properly or not.
+      Car.stubs(:all).returns([car, car_2])
+
       get :index, {}, valid_session
-      expect(assigns(:cars)).to eq([car])
+      expect(assigns(:cars)).to eq([car, car_2])
+    end
+
+    it "assigns no cars as @cars if there are none" do
+      Car.stubs(:all).returns(nil)
+
+      get :index, {}, valid_session
+      expect(assigns(:cars)).to be_nil
     end
   end
 
   describe "GET #show" do
     it "assigns the requested car as @car" do
+      # The below is how we would test this without stubs. But this is hitting the database for no reason..
       car = FactoryGirl.create(:car)
       get :show, {:id => car.to_param}, valid_session
       expect(assigns(:car)).to eq(car)
@@ -136,5 +156,4 @@ RSpec.describe CarsController, type: :controller do
       expect(response).to redirect_to(cars_url)
     end
   end
-
 end

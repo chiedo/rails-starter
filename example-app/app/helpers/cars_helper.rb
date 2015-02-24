@@ -9,4 +9,19 @@ module CarsHelper
   def concat_strings(x, y)
     return [x, y].join " "
   end
+
+  # Returns details about a car as a string. This may not be in the right place, but this is here primarily
+  # for educational purposes on mocking.
+  #
+  # * *Args*    :
+  #   - +car+ -> A car
+  # * *Returns* :
+  #   - the final string
+  def car_details(car)
+    unless(car.nil?)
+      return car.name + " - " + car.description + " - $" + car.price.to_s
+    else
+      return "No details present"
+    end
+  end
 end
