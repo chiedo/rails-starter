@@ -22,5 +22,15 @@ module ExampleApp
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Decides what generators to use
+    config.generators do |g|
+      g.test_framework :rspec
+      g.view_specs false
+      g.helper_specs false
+      g.request_specs false
+      g.controller_specs true
+      g.routing_specs true
+    end
   end
 end
