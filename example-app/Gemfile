@@ -30,8 +30,8 @@ group :development, :test do
 
   # Better alternative to the standard rails testing suite
   gem 'rspec-rails', '~> 3.2.0'
-  # Test double package for rspec rails
-  gem 'rspec-mocks', '~> 3.2.0'
+  # Test double package for ruby
+  gem 'mocha', '~> 1.1.0'
   # provides a framework and DSL for defining and using factories - less error-prone, more explicit, and all-around easier to work with than fixtures.
   gem 'factory_girl', '~> 4.5.0'
 
