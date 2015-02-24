@@ -6,7 +6,7 @@ READ THIS FIRST (DO NOT IGNORE): https://gist.github.com/chiedojohn/c3e37041b829
 
 Notes
 ----------
-> You will see an app by the name of "example-app" within the base directory. This app will contain some basic examples of how to structure your tests, set up different areas of your project, etc. Do not use that to build your rails app. Just reference that code if needed. You may even just want to copy that app to your desktop somewhere and delete it from the git repo.
+> You will see an app by the name of "example-app" within the base directory. This app will contain some basic examples of how to structure your tests, set up different areas of your project, etc. Do not use that to build your rails app. Just reference that code if needed. You may even just want to copy that app to your desktop somewhere and delete it from the git repo. Obviously, when you navigate into the example-app directory, you will need to run ```bundle install```
 > Due to the sluggishness of ruby this whole process of setting up your VM will take about 1 hour.
 Local Development Environment
 ----------
