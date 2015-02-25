@@ -18,7 +18,7 @@ RSpec.describe StaticPagesController, type: :controller do
       expect(response).to redirect_to :controller => "devise/sessions", :action => "new"
     end
 
-    it "The users email displays if logged in" do
+    it "The Login status is correctly updated if the user is logged in" do
       sign_in user
       get :index
 
