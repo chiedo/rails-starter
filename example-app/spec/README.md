@@ -12,8 +12,8 @@ Testing concept examples
   - spec/helpers/cars_helper_spec.rb
 - Misc classes
   - spec/extras/example_custom_class_spec.rb
-- Mocks stubs (mocha)
-  - spec/models/car_spec.rb
+- Stubs (mocha)
+  - spec/controllers/cars_controller_spec.rb
 - Mocks (mocha)
   - spec/helpers/car_helper_spec.rb
 - Devise
