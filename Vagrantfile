@@ -86,7 +86,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Required for NFS to work, pick any local IP
   config.vm.network :private_network, ip: '192.168.50.140'
   # Use NFS for shared folders for better performance
-  config.vm.synced_folder '.', '/vagrant', nfs: true
+  config.vm.synced_folder '.', '/vagrant', nfs: true, :mount_options => ['actimeo=2']
 
   # Sets Vagrant VM to use. 1/4 system memory & access to all cpu cores on the host
   host = RbConfig::CONFIG['host_os']
