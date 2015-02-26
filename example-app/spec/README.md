@@ -15,7 +15,7 @@ Testing concept examples
 - Stubs (mocha)
   - spec/controllers/cars_controller_spec.rb
 - Mocks (mocha)
-  - spec/helpers/cars_helper_spec.rb
+  - spec/helpers/car_helper_spec.rb
 - Devise
   - spec/controllers/static_pages_controller_spec.rb
     - Not using the before_action authenticate! option they have. It caused issues with the tests. Writing a filter to the same affect was easy. If you can figure out how to make the tests with before_authenticate work, please be my guest and tell me how.

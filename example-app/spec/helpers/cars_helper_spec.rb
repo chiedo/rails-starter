@@ -18,6 +18,9 @@ RSpec.describe CarsHelper, type: :helper do
        # validate whether or not the correct attributes or functions were accessed. This is useful if we want
        # to ensure that validation happend or certain checks happened before doing something.
        car = mock('car')
+       car.expects(:name).returns("Acura")
+       car.expects(:description).returns("The best car... ever")
+       car.expects(:price).returns(1000)
        car.expects(:nil?).returns(false)
 
        # If you uncomment the below, you will see that the test will fail since car.fake_attribute is never called
