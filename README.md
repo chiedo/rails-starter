@@ -14,7 +14,7 @@ Local Development Environment
 
 ```
 gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
-\curl -L https://get.rvm.io | bash -s stable --ruby=2.1
+\curl -L https://get.rvm.io | bash -s stable --ruby=2.2
 source "/home/vagrant/.rvm/scripts/rvm"
 rvm use 2.1 --default
 cd /vagrant
