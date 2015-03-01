@@ -1,0 +1,21 @@
+language: ruby
+rvm:
+  - 2.2.0
+before_install:
+- cd example-app
+- gem install bundler
+# command to install dependencies
+install:
+- bundle install 
+# command to run tests
+script:
+- bundle exec rspec 
+branches:
+  only:
+    - master
+notifications:
+  email:
+    recipients:
+      - chiedo@chie.do
+    on_success: never
+    on_failure: always
