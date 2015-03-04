@@ -40,4 +40,7 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
+  # Allow Console access from within a VM
+  config.web_console.whitelisted_ips = %w( 127.0.0.1 192.168.0.0/16 10.0.2.0/16 10.0.1.0/16 192.168.1.0/16 )
+
 end
