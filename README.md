@@ -1,6 +1,6 @@
 Rails-vagrant-starter
 =========
-<img src="https://travis-ci.org/chiedojohn/rails-vagrant-starter.svg?branch=master" />
+<img src="https://travis-ci.org/chiedojohn/rails-starter.svg?branch=master" />
 
 READ THIS FIRST (DO NOT IGNORE): https://gist.github.com/chiedojohn/c3e37041b829f28c0c78
 ----------
