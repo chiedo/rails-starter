@@ -1,16 +1,36 @@
-Rails-vagrant-starter
+Rails-starter
 =========
 <img src="https://travis-ci.org/chiedojohn/rails-starter.svg?branch=master" />
 
-READ THIS FIRST (DO NOT IGNORE): https://gist.github.com/chiedojohn/c3e37041b829f28c0c78
-----------
+A framework for a new rails 4.2.0/ruby 2.2 project utilizing vagrant or docker for setting up the development environment.
 
-Notes
-----------
-> You will see an app by the name of "example-app" within the base directory. This app will contain some basic examples of how to structure your tests, set up different areas of your project, etc. Do not use that to build your rails app. Just reference that code if needed. You may even just want to copy that app to your desktop somewhere and delete it from the git repo. Obviously, when you navigate into the example-app directory, you will need to run ```bundle install```
-> Due to the sluggishness of ruby this whole process of setting up your VM will take about 30 minutes.
-Local Development Environment
-----------
+Notes: Docker is much faster and much more forgiving to changes although it has a slight learning curve. Do not have your vagrant vm and boot2docker running at the same time to prevent annoying issues. Vagrant at this point is a second class citizen and may not actively be maintained.
+
+Platform Specific Notes
+====================
+Docker Notes
+--------------
+First read: https://gist.github.com/chiedojohn/e7ece910ef4a7e3ce125
+
+You will need to set up a file by the name of .env in the root of your project to store private environments that should not be committed to the git repository. It should have the following contents that you can customize if needed.
+```
+#RAILS
+RAILS_ENV=development
+#MYSQL
+MYSQL_DATABASE=app_development
+MYSQL_USER=root
+MYSQL_PASSWORD=root
+# This needs to be set if you are using root as the username
+MYSQL_ROOT_PASSWORD=root
+# This is using the docker link
+MYSQL_HOSTNAME=db
+MYSQL_PORT=3306
+```
+
+Vagrant Notes
+----------------
+First read: https://gist.github.com/chiedojohn/c3e37041b829f28c0c78
+
 - Once inside your vagrant virtual machine, navigate to /vagrant and you are ready to start your rails app by running the following:
 
 ```
@@ -21,12 +41,18 @@ rvm use 2.1 --default
 cd /vagrant
 gem install bundler
 gem install rails --no-ri --no-rdoc
+```
+
+Local Development Environment
+----------
+To get started you can build on top of this project or remove all the rails related files and the following:
+```
 rails new .
 ```
 
 When running rails
 -----------
-You will need to run "rails s -b 0.0.0.0" to make sure the rails app is accessible outside of Vagrant
+You will need to run "rails s -b 0.0.0.0" to make sure the rails app is accessible outside of the vm or container.
 
 Testing
 -----------

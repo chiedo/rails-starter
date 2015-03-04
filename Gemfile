@@ -17,6 +17,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+# Don't even know why this is needed but it is...
+gem 'globalid', '~> 0.3.3'
 
 # User authentication
 gem 'devise', '~> 3.4.1'

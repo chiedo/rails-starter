@@ -3,8 +3,4 @@ public/assets
 tmp
 doc
 log
-
-example-app/public/assets
-example-app/tmp
-example-app/doc
-example-app/log
+.env
