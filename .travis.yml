@@ -2,7 +2,6 @@ language: ruby
 rvm:
   - 2.2.0
 before_install:
-- cd example-app
 - gem install bundler
 # command to install dependencies
 install:
