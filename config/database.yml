@@ -18,7 +18,7 @@ development:
 
 #test:
   #<<: *default
-  #database: example_app_test
+  #database: app_test
 
 # Your rspec tests will run faster with this option set as they will run in ram. Obviously, they won't be running on the
 # same adapter as your live code base so you can make the decision for yourself on if it is worth the trade off. In most
