@@ -6,6 +6,8 @@ RUN apt-get update -qq && apt-get install -y \
 
 # Set up the App
 RUN mkdir /code
-WORKDIR /code
 ADD Gemfile /code/Gemfile
-RUN bundle install
+RUN cd /code && bundle install
+
+# This should be the last thing
+WORKDIR /code
