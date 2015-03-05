@@ -27,7 +27,7 @@ MYSQL_HOSTNAME=db
 MYSQL_PORT=3306
 ```
 
-If you have issues with Gems when attempting to run your app, remove the Gemfile.lock file and then re-run the bundle install
+If you have issues with Gems when attempting to run your app, remove the Gemfile.lock file and then re-run the bundle install and bundle update
 
 Vagrant Notes
 ----------------
