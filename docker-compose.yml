@@ -7,7 +7,8 @@ db:
     - "5433:3306"
 web:
   build: .
-  command: bundle exec rails s -p 3000 -b '0.0.0.0'
+  # The below is a hackish way to make the web container run indefinitely until stopped
+  command: tail -f /dev/null
   volumes:
     - .:/code
   ports:
