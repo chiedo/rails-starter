@@ -4,8 +4,6 @@ Rails-starter
 
 A framework for a new rails 4.2.0/ruby 2.2 project utilizing vagrant or docker for setting up the development environment.
 
-Notes: Docker is much faster and much more forgiving to changes although it has a slight learning curve. Do not have your vagrant vm and boot2docker running at the same time to prevent annoying issues. Vagrant at this point is a second class citizen and may not actively be maintained.
-
 Platform Specific Notes
 ====================
 Docker Notes
