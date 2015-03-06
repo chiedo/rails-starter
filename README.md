@@ -51,7 +51,7 @@ rails new .
 
 Be sure to add a blank Gemfile.lock if one is not present after running the above.
 
-Be sure to run rake:db create as well as your migrations
+Be sure to run rake db:create as well as your migrations
 
 When running rails
 -----------
