@@ -46,13 +46,18 @@ gem install rails --no-ri --no-rdoc
 Local Development Environment
 ----------
 To get started you can build on top of this project or remove all the rails related files and the following:
+
 ```
 rails new .
 ```
 
+Be sure to add a blank Gemfile.lock if one is not present after running the above.
+
 When running rails
 -----------
-You will need to run "rails s -b 0.0.0.0" to make sure the rails app is accessible outside of the vm or container.
+You will need to run the following to make sure the rails app is accessible outside of the vm or container.
+
+```rails s -b 0.0.0.0```
 
 Testing
 -----------
