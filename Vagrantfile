@@ -24,10 +24,6 @@ cd
 
 if [ ! -f /var/log/databasesetup ];
 then
-    echo "CREATE DATABASE app_test" | mysql -uroot -proot
-    echo "CREATE DATABASE app_development" | mysql -uroot -proot
-    echo "CREATE DATABASE app_production" | mysql -uroot -proot
-
     echo "CREATE USER 'root'@'%' IDENTIFIED BY 'root';" | mysql -uroot -proot
     #make mysql listen to connections from the outside
     echo "GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;" | mysql -uroot -proot
@@ -54,7 +50,7 @@ then
   # MYSQL
   echo 'export MYSQL_DATABASE="app_development"' | sudo tee -a /home/vagrant/.bashrc
   echo 'export MYSQL_USER="root"' | sudo tee -a /home/vagrant/.bashrc
-  echo 'export MYSQL_PASSWORD="root"' | sudo tee -a /home/vagrant/.bashrc
+  echo 'export MYSQL_PASS="root"' | sudo tee -a /home/vagrant/.bashrc
   echo 'export MYSQL_HOSTNAME="127.0.0.1"' | sudo tee -a /home/vagrant/.bashrc
   echo 'export MYSQL_PORT="3306"' | sudo tee -a /home/vagrant/.bashrc
   touch /var/log/devenv

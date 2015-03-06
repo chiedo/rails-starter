@@ -12,7 +12,7 @@ development:
   # No harm in hard coding the database name in each project for development purposes.
   database: <%= ENV["MYSQL_DATABASE"] %>
   username: <%= ENV["MYSQL_USER"] %>
-  password: <%= ENV["MYSQL_PASSWORD"] %>
+  password: <%= ENV["MYSQL_PASS"] %>
   host: <%= ENV["MYSQL_HOSTNAME"] %>
   port: <%= ENV["MYSQL_PORT"] %>
 

@@ -16,10 +16,8 @@ You will need to set up a file by the name of .env in the root of your project t
 RAILS_ENV=development
 #MYSQL
 MYSQL_DATABASE=app_development
-MYSQL_USER=root
-MYSQL_PASSWORD=root
-# This needs to be set if you are using root as the username
-MYSQL_ROOT_PASSWORD=root
+MYSQL_USER=admin
+MYSQL_PASS=admin
 # This is using the docker link
 MYSQL_HOSTNAME=db
 MYSQL_PORT=3306
@@ -52,6 +50,8 @@ rails new .
 ```
 
 Be sure to add a blank Gemfile.lock if one is not present after running the above.
+
+Be sure to run rake:db create as well as your migrations
 
 When running rails
 -----------

@@ -1,6 +1,6 @@
 # Don't use this for production purposes. Docker compose is only for development and staging servers
 db:
-  image: mysql
+  image: tutum/mysql:5.5
   env_file:
     - .env
   ports:
