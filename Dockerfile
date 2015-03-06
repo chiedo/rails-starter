@@ -7,6 +7,7 @@ RUN apt-get update -qq && apt-get install -y \
 # Set up the App
 RUN mkdir /code
 ADD Gemfile /code/Gemfile
+ADD Gemfile.lock /code/Gemfile.lock
 RUN cd /code && bundle install
 
 # This should be the last thing
