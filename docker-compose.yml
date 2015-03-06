@@ -7,8 +7,7 @@ db:
     - "5433:3306"
 web:
   build: .
-  # The below is a hackish way to make the web container run indefinitely until stopped
-  command: tail -f /dev/null
+  command: bash /code/docker-compose-web-up.sh
   volumes:
     - .:/code
   ports:

@@ -2,7 +2,7 @@ Rails-starter
 =========
 <img src="https://travis-ci.org/chiedojohn/rails-starter.svg?branch=master" />
 
-A framework for a new rails 4.2.0/ruby 2.2 project utilizing vagrant or docker for setting up the development environment.
+A framework for a new rails 4.2.0/ruby 2.2 project utilizing vagrant or docker 1.5.0 for setting up the development environment.
 
 Platform Specific Notes
 ====================
