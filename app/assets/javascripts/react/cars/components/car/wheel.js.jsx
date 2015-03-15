@@ -1,5 +1,5 @@
 /** @jsx React.DOM */
-namespace = reactFunctions.setNamespace("car_shop.components.car.wheel");
+namespace = reactFunctions.setNamespace("cars.components.car.wheel");
 
 namespace.wheel =
   React.createClass({
