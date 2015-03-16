@@ -4,6 +4,8 @@
   <title>ExampleApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= yield :header_scripts %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -13,5 +15,6 @@
 
 <%= yield %>
 
+<%= yield :footer_scripts %>
 </body>
 </html>

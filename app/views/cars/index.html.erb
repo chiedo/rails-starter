@@ -1,2 +1,5 @@
-<%= javascript_include_tag "react/cars/main.js", "data-turbolinks-track" => true %>
 <%= react_component("cars.components.car.car", {name: 'Batmobile'}) %>
+
+<% content_for :footer_scripts do %>
+  <%= javascript_include_tag "react/cars/main", "data-turbolinks-track" => true %>
+<% end %>
