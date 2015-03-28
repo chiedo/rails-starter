@@ -23,9 +23,6 @@ gem 'globalid', '~> 0.3.3'
 # User authentication
 gem 'devise', '~> 3.4.1'
 
-# React
-gem 'react-rails', '~> 1.0.0.pre', github: 'reactjs/react-rails'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '~> 3.5.1'

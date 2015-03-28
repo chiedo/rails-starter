@@ -1,5 +1,0 @@
-var COMPONENTS = "cars.components"
-var STORES = "cars.stores"
-var ACTIONS = "cars.actions"
-var DISPATCHERS = "cars.dispatchers"
-var CONSTANTS = "cars.constants"
