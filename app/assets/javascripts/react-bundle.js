@@ -7,8 +7,8 @@ var Car = React.createClass({displayName: "Car",
 
   render: function() {
     return (
-      React.createElement("div", {className: "car"}, 
-        "The Car", 
+      React.createElement("div", {className: "the-car"}, 
+        "Car", 
         React.createElement(Wheel, null)
       )
     );

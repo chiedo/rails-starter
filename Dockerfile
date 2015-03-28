@@ -12,6 +12,6 @@ ADD Gemfile /code/Gemfile
 ADD Gemfile.lock /code/Gemfile.lock
 ADD react/package.json /code/react/package.json
 WORKDIR /code/react
-RUN npm install && npm install -g
+RUN npm install && npm install -g gulp
 WORKDIR /code
 RUN bundle install
