@@ -62,3 +62,7 @@ You will need to run the following to make sure the rails app is accessible outs
 Testing
 -----------
 - See https://github.com/rspec/rspec-rails for the basics.
+
+Reactjs
+-----------
+- See react/README.md

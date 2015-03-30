@@ -6,9 +6,22 @@ var Car = React.createClass({
 
   render: function() {
     return (
-      <div className="the-car">
-        Car
-        <Wheel />
+      <div className="car">
+        A car with the following wheels
+        <ul>
+          <li>
+            <Wheel />
+          </li>
+          <li>
+            <Wheel />
+          </li>
+          <li>
+            <Wheel />
+          </li>
+          <li>
+            <Wheel />
+          </li>
+      </ul>
       </div>
     );
   }
