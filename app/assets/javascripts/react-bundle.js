@@ -7,11 +7,10 @@ var Bus = React.createClass({displayName: "Bus",
   render: function() {
     return (
       React.createElement("div", {className: "bus"}, 
-        "Bus without wheels."
+         this.props.name, " without wheels."
       )
     );
   }
-
 });
 
 module.exports = Bus;
@@ -27,7 +26,7 @@ var Car = React.createClass({displayName: "Car",
   render: function() {
     return (
       React.createElement("div", {className: "car"}, 
-        "A car with the following wheels", 
+        "A ", this.props.name, " with the following wheels", 
         React.createElement("ul", null, 
           React.createElement("li", null, 
             React.createElement(Wheel, null)
@@ -73,26 +72,17 @@ module.exports = Wheel;
 },{"react":160}],4:[function(require,module,exports){
 /** @jsx React.DOM */
 var React = require('react');
+window.React = React; // This makes sure react is global and gets rid of the need to include react in the application.js file
 
-// For each component that you want to be accessible to your views, you need to do the following. This just allows more components to be used on a page by page basis. I wrapped each React.Render call in a conditional to make sure the element with the needed ID exists first before attempting to render the element to render the element.
+// For each component that you want to be accessible to your views, you need to do the following. This just allows more components to be used in a modular fashion. You will notice that usual there would be a React.createClass(...) function for each component. We are using the react-rails render_component helper instead in each view so we will lean on that instead. Because of this, we will also need to rely on react_ujs being in the application.js file.
 
 // Example 1
 var Car = require('./components/Car.react');
-if(document.getElementById('react-car') !== null) {
-  React.render(
-    React.createElement(Car, null),
-    document.getElementById('react-car')
-  )
-}
+window.Car = Car; // makes it accessible to globally which is needed for React-rails
 
 // Example 2
 var Bus = require('./components/Bus.react');
-if(document.getElementById('react-bus') !== null) {
-  React.render(
-    React.createElement(Bus, null),
-    document.getElementById('react-bus')
-  )
-}
+window.Bus = Bus;
 
 
 },{"./components/Bus.react":1,"./components/Car.react":2,"react":160}],5:[function(require,module,exports){

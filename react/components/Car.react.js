@@ -7,7 +7,7 @@ var Car = React.createClass({
   render: function() {
     return (
       <div className="car">
-        A car with the following wheels
+        A {this.props.name} with the following wheels
         <ul>
           <li>
             <Wheel />
