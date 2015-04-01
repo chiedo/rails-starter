@@ -1,5 +1,4 @@
-/** @jsx React.DOM */
-var Wheel = require('./Wheel.react');
+var Wheel = require('./Wheel.react.jsx');
 var React = require('react');
 
 var Car = React.createClass({

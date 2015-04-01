@@ -4,7 +4,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 
 gulp.task('browserify', function() {
-  gulp.src('main.js')
+  gulp.src('main.jsx')
   .pipe(browserify({transform: 'reactify'}))
   .pipe(concat('react-bundle.js'))
   //.pipe(uglify())
@@ -14,5 +14,5 @@ gulp.task('browserify', function() {
 gulp.task('default',['browserify']);
 
 gulp.task('watch', function() {
-  gulp.watch(["main.js", '**/*.*'], ['default']);
+  gulp.watch(['**/*.*'], ['browserify']);
 });

@@ -1,5 +1,4 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/** @jsx React.DOM */
 var React = require('react');
 
 var Bus = React.createClass({displayName: "Bus",
@@ -17,8 +16,7 @@ module.exports = Bus;
 
 
 },{"react":160}],2:[function(require,module,exports){
-/** @jsx React.DOM */
-var Wheel = require('./Wheel.react');
+var Wheel = require('./Wheel.react.jsx');
 var React = require('react');
 
 var Car = React.createClass({displayName: "Car",
@@ -50,8 +48,7 @@ var Car = React.createClass({displayName: "Car",
 module.exports = Car;
 
 
-},{"./Wheel.react":3,"react":160}],3:[function(require,module,exports){
-/** @jsx React.DOM */
+},{"./Wheel.react.jsx":3,"react":160}],3:[function(require,module,exports){
 var React = require('react');
 
 var Wheel = React.createClass({displayName: "Wheel",
@@ -70,22 +67,21 @@ module.exports = Wheel;
 
 
 },{"react":160}],4:[function(require,module,exports){
-/** @jsx React.DOM */
 var React = require('react');
 window.React = React; // This makes sure react is global and gets rid of the need to include react in the application.js file
 
 // For each component that you want to be accessible to your views, you need to do the following. This just allows more components to be used in a modular fashion. You will notice that usual there would be a React.createClass(...) function for each component. We are using the react-rails render_component helper instead in each view so we will lean on that instead. Because of this, we will also need to rely on react_ujs being in the application.js file.
 
 // Example 1
-var Car = require('./components/Car.react');
+var Car = require('./components/Car.react.jsx');
 window.Car = Car; // makes it accessible to globally which is needed for React-rails
 
 // Example 2
-var Bus = require('./components/Bus.react');
+var Bus = require('./components/Bus.react.jsx');
 window.Bus = Bus;
 
 
-},{"./components/Bus.react":1,"./components/Car.react":2,"react":160}],5:[function(require,module,exports){
+},{"./components/Bus.react.jsx":1,"./components/Car.react.jsx":2,"react":160}],5:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
