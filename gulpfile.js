@@ -4,15 +4,15 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 
 gulp.task('browserify', function() {
-  gulp.src('main.jsx')
+  gulp.src('./react/main.react.jsx')
   .pipe(browserify({transform: 'reactify'}))
   .pipe(concat('react-bundle.js'))
   //.pipe(uglify())
-  .pipe(gulp.dest('../app/assets/javascripts'));
+  .pipe(gulp.dest('./app/assets/javascripts'));
 });
 
 gulp.task('default',['browserify']);
 
 gulp.task('watch', function() {
-  gulp.watch(['**/*.*'], ['browserify']);
+  gulp.watch(['./react/**/*.*'], ['browserify']);
 });

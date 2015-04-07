@@ -5,10 +5,11 @@ var Bus = React.createClass({
   render: function() {
     return (
       <div className="bus">
-        { this.props.name } without wheels.
+        A Bus without wheels.
       </div>
     );
   }
+
 });
 
 module.exports = Bus;

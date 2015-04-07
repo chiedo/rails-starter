@@ -1,7 +1,1 @@
-<% content_for :footer_scripts do %>
-  <%= javascript_include_tag "react-bundle", "data-turbolinks-track" => true %>
-<% end %>
-<!-- since prerender is turned on, this will be prerendered by the server and will not flash -->
-<%= react_component('Car', { name: "Subaru" }, {prerender: true}) %>
-<!-- since this component is not prerendered, you will watch it flash-->
-<%= react_component('Bus', { name: "School Bus" }, {prerender: false}) %>
+Cars

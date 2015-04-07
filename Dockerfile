@@ -10,8 +10,7 @@ RUN apt-get update -qq && apt-get install -y \
 RUN mkdir /code
 ADD Gemfile /code/Gemfile
 ADD Gemfile.lock /code/Gemfile.lock
-ADD react/package.json /code/react/package.json
-WORKDIR /code/react
-RUN npm install && npm install -g gulp
+ADD package.json /code/package.json
 WORKDIR /code
+RUN npm install && npm install -g gulp
 RUN bundle install

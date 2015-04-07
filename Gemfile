@@ -19,7 +19,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # Don't even know why this is needed but it is...
 gem 'globalid', '~> 0.3.3'
-gem 'react-rails', github: 'reactjs/react-rails'
 
 # User authentication
 gem 'devise', '~> 3.4.1'

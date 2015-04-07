@@ -1,5 +1,4 @@
-<h1>The home page</h1>
-<% if user_signed_in? %>
-  <%= current_user.email %>
+<% content_for :footer_scripts do %>
+  <%= javascript_include_tag "react-bundle", "data-turbolinks-track" => true %>
 <% end %>
-<br>
+<div id="react-app"></div>

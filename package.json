@@ -1,5 +1,5 @@
 {
-  "name": "rails-starter",
+  "name": "events-app",
   "version": "0.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -11,12 +11,10 @@
     "gulp-concat": "~2.2.0",
     "react": "~0.13.1",
     "reactify": "~1.1.0",
-    "gulp-uglify": "~0.3.1"
+    "gulp-uglify": "~0.3.1",
+    "react-router-component": "~0.24.4"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  "author": "Chiedo John",
+  "license": "Private"
 }
