@@ -3,6 +3,7 @@ Rails-starter
 <img src="https://travis-ci.org/chiedojohn/rails-starter.svg?branch=master" />
 
 A framework for a new rails 4.2.0/ruby 2.2 project utilizing vagrant or docker 1.5.0 for setting up the development environment.
+You are welcome to not use Docker or Vagrant and just run everything locally but handling the configurations for your local development environment will be up to you.
 
 Platform Specific Notes
 ====================
@@ -40,6 +41,11 @@ cd /vagrant
 gem install bundler
 gem install rails --no-ri --no-rdoc
 ```
+
+Without Docker on Vagrant
+--------------------
+You will need to set up a database server, then also will need to set up any needed environment variables (see Docker Notes) using the following http://richonrails.com/articles/environment-variables-in-ruby-on-rails. Be sure to add your config/environment_variables.yml to your gitignore.
+
 
 Local Development Environment
 ----------
