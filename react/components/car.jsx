@@ -1,5 +1,5 @@
 var React = require('react');
-var Wheel = require('./Wheel.react.jsx');
+var Wheel = require('./wheel.jsx');
 
 var Car = React.createClass({
 

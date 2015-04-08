@@ -4,7 +4,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 
 gulp.task('browserify', function() {
-  gulp.src('./react/main.react.jsx')
+  gulp.src('./react/main.jsx')
   .pipe(browserify({transform: 'reactify'}))
   .pipe(concat('react-bundle.js'))
   //.pipe(uglify())

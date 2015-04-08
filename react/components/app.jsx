@@ -1,7 +1,6 @@
-/** @jsx React.DOM */
 var React = require('react');
-var Car = require('./Car.react.jsx');
-var Bus = require('./Bus.react.jsx');
+var Car = require('./car.jsx');
+var Bus = require('./bus.jsx');
 var Router = require('react-router-component');
 
 var Locations = Router.Locations;
