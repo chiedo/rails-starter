@@ -2,11 +2,34 @@ Rails-starter
 =========
 <img src="https://travis-ci.org/chiedojohn/rails-starter.svg?branch=master" />
 
-A framework for a new rails 4.2.0/ruby 2.2 project utilizing vagrant or docker 1.5.0 for setting up the development environment.
-You are welcome to not use Docker or Vagrant and just run everything locally but handling the configurations for your local development environment will be up to you.
+A framework for a new rails 4.2.0/ruby 2.2 project for setting up the development environment.
 
 Platform Specific Option
 ====================
+Local Option
+--------------------
+- Create a database on MAMP (If on a non-mac computer, setup a database on your OS and update the ports, etc. below accordingly)
+- Create an .env file with the following contents
+
+```
+# RAILS
+RAILS_ENV=development
+#MYSQL
+MYSQL_DATABASE=YOURAPPNAME_development
+MYSQL_USER=root
+MYSQL_PASS=root
+MYSQL_HOSTNAME=127.0.0.1
+MYSQL_PORT=8889
+```
+
+Add the the following in ~/.bundle/.config to make bundler install gems into the app directory under vendor/bundle directory:
+
+```
+BUNDLE_PATH: 'vendor/bundle'
+```
+
+With this approach, you will need to make sure you use 'bundle exec' before any rails commands, etc.
+
 Docker Option
 --------------
 First read: https://gist.github.com/chiedojohn/e7ece910ef4a7e3ce125
@@ -42,28 +65,6 @@ cd /vagrant
 gem install bundler
 gem install rails --no-ri --no-rdoc
 ```
-
-Local Option
---------------------
-- Create a database on MAMP (If on a non-mac computer, setup a database on your OS and update the ports, etc. below accordingly)
-- Create an .env file with the following contents
-
-```
-RAILS_ENV=development
-MYSQL_DATABASE=YOURAPPNAME_development
-MYSQL_USER=root
-MYSQL_PASS=root
-MYSQL_HOSTNAME=127.0.0.1
-MYSQL_PORT=8889
-```
-
-Add the the following in ~/.bundle/.config to make bundler install gems into the app directory under vendor/bundle directory:
-
-```
-BUNDLE_PATH: 'vendor/bundle'
-```
-
-With this approach, you will need to make sure you use 'bundle exec' before any rails commands, etc.
 
 Development Environment
 ----------
