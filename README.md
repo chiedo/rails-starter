@@ -44,7 +44,13 @@ gem install rails --no-ri --no-rdoc
 
 Without Docker on Vagrant
 --------------------
-You will need to set up a database server, then also will need to set up any your .env file as described in Docker notes except with your local database information. Be sure to make the database name unique. You will need to set up the 'dotenv' gem.
+You will need to set up a database server, then also will need to set up any your .env file as described in Docker notes except with your local database information. Be sure to make the database name unique. You will need to set up the 'dotenv' gem. Also put the following in ~/.bundle/.config to make bundler install into the local directory always:
+
+```
+BUNDLE_PATH: 'vendor/bundle'
+```
+
+Note that with this approach, you will need to make sure you use 'bundle exec' before any rails commands, etc.
 
 Local Development Environment
 ----------
