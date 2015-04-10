@@ -44,8 +44,7 @@ gem install rails --no-ri --no-rdoc
 
 Without Docker on Vagrant
 --------------------
-You will need to set up a database server, then also will need to set up any needed environment variables (see Docker Notes) using the following http://richonrails.com/articles/environment-variables-in-ruby-on-rails. Be sure to add your config/environment_variables.yml to your gitignore.
-
+You will need to set up a database server, then also will need to set up any your .env file as described in Docker notes except with your local database information. Be sure to make the database name unique. You will need to set up the 'dotenv' gem.
 
 Local Development Environment
 ----------
