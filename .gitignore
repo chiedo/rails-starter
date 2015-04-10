@@ -5,3 +5,4 @@ doc
 log
 .env
 node_modules
+vendor/bundle
