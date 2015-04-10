@@ -5,13 +5,14 @@ Rails-starter
 A framework for a new rails 4.2.0/ruby 2.2 project utilizing vagrant or docker 1.5.0 for setting up the development environment.
 You are welcome to not use Docker or Vagrant and just run everything locally but handling the configurations for your local development environment will be up to you.
 
-Platform Specific Notes
+Platform Specific Option
 ====================
-Docker Notes
+Docker Option
 --------------
 First read: https://gist.github.com/chiedojohn/e7ece910ef4a7e3ce125
 
 You will need to set up a file by the name of .env in the root of your project to store private environments that should not be committed to the git repository. It should have the following contents that you can customize if needed.
+
 ```
 #RAILS
 RAILS_ENV=development
@@ -26,7 +27,7 @@ MYSQL_PORT=3306
 
 If you have issues with Gems when attempting to run your app, remove the Gemfile.lock file and then re-run the bundle install and bundle update
 
-Vagrant Notes
+Vagrant Option
 ----------------
 First read: https://gist.github.com/chiedojohn/c3e37041b829f28c0c78
 
@@ -42,33 +43,45 @@ gem install bundler
 gem install rails --no-ri --no-rdoc
 ```
 
-Without Docker on Vagrant
+Local Option
 --------------------
-You will need to set up a database server, then also will need to set up any your .env file as described in Docker notes except with your local database information. Be sure to make the database name unique. You will need to set up the 'dotenv' gem. Also put the following in ~/.bundle/.config to make bundler install into the local directory always:
+- Create a database on MAMP (If on a non-mac computer, setup a database on your OS and update the ports, etc. below accordingly)
+- Create an .env file with the following contents
+
+```
+RAILS_ENV=development
+MYSQL_DATABASE=YOURAPPNAME_development
+MYSQL_USER=root
+MYSQL_PASS=root
+MYSQL_HOSTNAME=127.0.0.1
+MYSQL_PORT=8889
+```
+
+Add the the following in ~/.bundle/.config to make bundler install gems into the app directory under vendor/bundle directory:
 
 ```
 BUNDLE_PATH: 'vendor/bundle'
 ```
 
-Note that with this approach, you will need to make sure you use 'bundle exec' before any rails commands, etc.
+With this approach, you will need to make sure you use 'bundle exec' before any rails commands, etc.
 
-Local Development Environment
+Development Environment
 ----------
 To get started you can build on top of this project or remove all the rails related files and the following:
 
 ```
-rails new .
+bundle exec rails new .
 ```
 
 Be sure to add a blank Gemfile.lock if one is not present after running the above.
 
-Be sure to run rake db:create as well as your migrations
+Be sure to run bundle exec rake db:create as well as your migrations
 
 When running rails
 -----------
 You will need to run the following to make sure the rails app is accessible outside of the vm or container.
 
-```rails s -b 0.0.0.0```
+```bundle exec rails s -b 0.0.0.0```
 
 Testing
 -----------

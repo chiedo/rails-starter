@@ -24,6 +24,8 @@ gem 'globalid', '~> 0.3.3'
 gem 'devise', '~> 3.4.1'
 
 group :development, :test do
+  # Allows you to read environment variables from a .env file
+  gem 'dotenv-rails', '~> 2.0.1'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', '~> 3.5.1'
 
