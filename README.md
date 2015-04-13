@@ -20,7 +20,7 @@ MYSQL_HOSTNAME=127.0.0.1
 MYSQL_PORT=8889
 ```
 
-Add the the following in ~/.bundle/.config to make bundler install gems into the app directory under vendor/bundle directory:
+Add the the following in ~/.bundle/config to make bundler install gems into the app directory under vendor/bundle directory:
 
 ```
 BUNDLE_PATH: 'vendor/bundle'
