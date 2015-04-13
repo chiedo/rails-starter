@@ -8,8 +8,7 @@ Platform Specific Option
 ====================
 Local Option
 --------------------
-- Create a database on MAMP (If on a non-mac computer, setup a database on your OS and update the ports, etc. below accordingly)
-- Create an .env file with the following contents
+- Create an .env file with the following contents (Update the port, username and password in accordance with your local database setup)
 
 ```
 # RAILS
