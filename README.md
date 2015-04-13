@@ -8,11 +8,10 @@ Platform Specific Option
 ====================
 Local Option
 --------------------
+- Make sure you have an environment variable set up on your host machine which sets RAILS_ENV to development.
 - Create an .env file with the following contents (Update the port, username and password in accordance with your local database setup)
 
 ```
-# RAILS
-RAILS_ENV=development
 #MYSQL
 MYSQL_DATABASE=YOURAPPNAME_development
 MYSQL_USER=root
