@@ -2,7 +2,7 @@ Reactjs
 =========
 Notes
 ------------
-This is not to demostrate how to create a reactjs app. This to show you how to connect a Reactjs app into your rails project. You at this point, would be free to set up the Flux Architecture, etc. an set up your project. If you end up using a javascript router, be sure to turn off turbolinks.
+This is not to demostrate how to create a reactjs app, best practices or anything like that. This to show you how to connect a Reactjs app to your rails project in a way that maintains reactjs independence but also allow you to just use react for certain components. You at this point, would be free to set up the Flux Architecture, etc. an set up your project. If you end up using a javascript router, be sure to turn off turbolinks.
 
 Development
 ------------
