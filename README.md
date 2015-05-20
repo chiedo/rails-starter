@@ -18,6 +18,7 @@ MYSQL_USER=root
 MYSQL_PASS=root
 MYSQL_HOSTNAME=127.0.0.1
 MYSQL_PORT=8889
+SECRET_KEY_BASE=MAKE_SOMETHING_UP
 ```
 
 Add the the following in ~/.bundle/config to make bundler install gems into the app directory under vendor/bundle directory:
