@@ -1,4 +1,4 @@
-Rails-starter
+Rails-starter (React)
 =========
 <img src="https://travis-ci.org/chiedojohn/rails-starter.svg?branch=react" />
 
@@ -86,3 +86,10 @@ You will need to run the following to make sure the rails app is accessible outs
 Testing
 -----------
 - See https://github.com/rspec/rspec-rails for the basics.
+
+React
+-----------
+All routes not explicitly granted to rails in config/routes.rb will be granted to the ReactJS router. Some predefined routes are as follows:
+- /api/cars
+- /car
+- /bus
