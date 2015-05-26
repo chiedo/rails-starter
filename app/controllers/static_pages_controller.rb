@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   # Not using the before authenticate! action as it doesn't play nicely with rspec. So instead just write our own... simple.
-  before_filter :require_login
+  # before_filter :require_login
 
   def index
     @login_status = "Logged In User"

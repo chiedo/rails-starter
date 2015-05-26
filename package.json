@@ -1,0 +1,21 @@
+{
+  "name": "rails-starter",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "envify": "~1.2.1",
+    "es6-promise": "~1.0.0",
+    "react": "~0.13.1",
+    "reactify": "~1.1.0",
+    "react-router": "~0.13.3"
+  },
+  "devDependencies": {
+    "gulp-uglify": "~0.3.1",
+    "gulp": "~3.8.0",
+    "gulp-browserify": "~0.5.1",
+    "gulp-concat": "~2.2.0"
+  },
+  "author": "Chiedo John",
+  "license": "Private"
+}

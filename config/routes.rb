@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   scope :api, :format => false do
     resources :cars, defaults: { format: :json}
   end
+
+  # Redirect everything not explicitly defined to reactjs
+  get "*path" => "static_pages#index"
 end

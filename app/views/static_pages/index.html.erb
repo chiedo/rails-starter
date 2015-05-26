@@ -1,1 +1,4 @@
-Hello World
+<% content_for :footer_scripts do %>
+  <%= javascript_include_tag "react-bundle", "data-turbolinks-track" => true %>
+<% end %>
+<div id="react-app"></div>
