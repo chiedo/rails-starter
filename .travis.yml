@@ -9,9 +9,8 @@ script:
 branches:
   only:
     - master
+    - react
 notifications:
   email:
-    recipients:
-      - chiedo@chie.do
     on_success: never
     on_failure: always
