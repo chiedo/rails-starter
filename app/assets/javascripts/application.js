@@ -12,5 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 // Do not use require tree... Above only add the javascript that is needed for every page. 
