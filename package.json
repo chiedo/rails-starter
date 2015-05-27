@@ -11,10 +11,15 @@
     "react-router": "~0.13.3"
   },
   "devDependencies": {
-    "gulp-uglify": "~0.3.1",
+    "envify": "~1.2.1",
     "gulp": "~3.8.0",
-    "gulp-browserify": "~0.5.1",
-    "gulp-concat": "~2.2.0"
+    "gulp-concat": "~2.2.0",
+    "reactify": "~1.1.0",
+    "gulp-uglify": "~0.3.1",
+    "jest-cli": "~0.4.5",
+    "vinyl-source-stream": "~1.1.0",
+    "watchify": "~2.2.1",
+    "browserify": "~10.2.1"
   },
   "author": "Chiedo John",
   "license": "Private"
