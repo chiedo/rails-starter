@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require es5-shim/es5-shim-min  
+//= require es5-shim/es5-sham-min 
 // Do not use require tree... Above only add the javascript that is needed for every page. 
