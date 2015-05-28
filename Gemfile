@@ -23,6 +23,9 @@ gem 'globalid', '~> 0.3.3'
 # User authentication
 gem 'devise', '~> 3.4.1'
 
+# For providing javascript es5 functions for old browsers (mainly IE8)
+gem 'es5-shim-rails', '~> 4.0.1'
+
 group :development, :test do
   # Allows you to read environment variables from a .env file
   gem 'dotenv-rails', '~> 2.0.1'
