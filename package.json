@@ -20,7 +20,6 @@
     "vinyl-source-stream": "~1.1.0",
     "watchify": "~2.2.1",
     "browserify": "~10.2.1",
-    "babelify": "~6.1.2",
     "vinyl-buffer": "~1.0.0",
     "gulp-util": "~3.0.4",
     "gulp-sourcemaps": "~1.5.2",

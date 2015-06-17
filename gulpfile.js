@@ -11,12 +11,13 @@ var gutil      = require('gulp-util');
 var sourcemaps = require('gulp-sourcemaps');
 var assign     = require('lodash.assign');
 var reactify   = require('reactify');
-var babelify   = require("babelify");
 
 // add custom browserify options here
 var customOpts = {
   entries: ['./react/app.js'],
-  transform: [reactify, babelify], // We want to convert JSX to normal javascript and es6 to es5
+  transform: [
+    ["reactify", {"es6": true}]
+  ], // We want to convert JSX to normal javascript and es6 to es5
   debug: true
 };
 var opts = assign({}, watchify.args, customOpts);
