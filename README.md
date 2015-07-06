@@ -37,10 +37,9 @@ Be sure to add a blank Gemfile.lock if one is not present after running the abov
 
 Be sure to run bundle exec rake db:create as well as your migrations
 
-##When running rails
-You will need to run the following to make sure the rails app is accessible outside of the vm or container.
+##Running the rails server
 
-`bundle exec rails s -b 0.0.0.0`
+`bundle exec rails s`
 
 ##Testing
 - See https://github.com/rspec/rspec-rails for the basics.
