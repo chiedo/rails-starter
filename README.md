@@ -18,24 +18,15 @@ A framework for a new rails 4.2.0/ruby 2.2 project for setting up the developmen
         SECRET_KEY_BASE=MAKE_SOMETHING_UP
         ```
 
-Add the the following in ~/.bundle/config to make bundler install gems into the app directory under vendor/bundle directory:
+- Add the the following in ~/.bundle/config to make bundler install gems into the app directory under vendor/bundle directory:
 
-```
-BUNDLE_PATH: 'vendor/bundle'
-```
+        ```
+        BUNDLE_PATH: 'vendor/bundle'
+        ```
 
-Be sure to include 'bundle exec' before any rails commands, etc.
+- Be sure to include 'bundle exec' before any rails commands, etc.
 
-##Development Environment
-To get started you can build on top of this project or remove all the rails related files and the following:
-
-```
-bundle exec rails new .
-```
-
-Be sure to add a blank Gemfile.lock if one is not present after running the above.
-
-Be sure to run bundle exec rake db:create as well as your migrations
+- Be sure to run `bundle exec rake db:create` and `bundle exec rake db:migrate`
 
 ##Running the rails server
 
