@@ -14,7 +14,7 @@
 
 
 <%= yield %>
-
+<%= debug(params) if Rails.env.development? %>
 <%= yield :footer_scripts %>
 </body>
 </html>
