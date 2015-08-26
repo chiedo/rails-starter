@@ -11,6 +11,7 @@ var gutil      = require('gulp-util');
 var sourcemaps = require('gulp-sourcemaps');
 var assign     = require('lodash.assign');
 var reactify   = require('reactify');
+var uglify     = require("gulp-uglify");
 
 // add custom browserify options here
 var customOpts = {
@@ -21,19 +22,22 @@ var customOpts = {
   debug: true
 };
 var opts = assign({}, watchify.args, customOpts);
-var b = watchify(browserify(opts)); 
 
-// add transformations here
-// i.e. b.transform(coffeeify);
+var production = browserify(opts); 
+gulp.task('production', bundleProduction);
+production.on('log', gutil.log); // output build logs to terminal
 
-gulp.task('js', bundle); // so you can run `gulp js` to build the file
-b.on('update', bundle); // on any dep update, runs the bundler
-b.on('log', gutil.log); // output build logs to terminal
+var development = watchify(browserify(opts)); 
+gulp.task('development', bundleDevelopment);
+development.on('update', bundleDevelopment); // on any dep update, runs the bundler
+development.on('log', gutil.log); // output build logs to terminal
 
-function bundle() {
-  return b.bundle()
+function bundleDevelopment() {
+  return development.bundle()
     // log errors if they happen
-    .on('error', gutil.log.bind(gutil, 'Browserify Error'))
+    .on('error', function(err){
+      console.log(err.message);
+    })
     .pipe(source('react-bundle.js'))
     // optional, remove if you don't need to buffer file contents
     .pipe(buffer())
@@ -44,4 +48,18 @@ function bundle() {
     .pipe(gulp.dest('./app/assets/javascripts'));
 }
 
-gulp.task('default', ['js']);
+function bundleProduction() {
+  return production.bundle()
+    // log errors if they happen
+    .on('error', function(err){
+      console.log(err.message);
+    })
+    .pipe(source('react-bundle.js'))
+    // optional, remove if you don't need to buffer file contents
+    .pipe(buffer())
+    .pipe(uglify())
+    .pipe(gulp.dest('./app/assets/javascripts'));
+}
+
+gulp.task('default', ['development']);
+
