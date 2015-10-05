@@ -27,6 +27,8 @@ gem 'devise', '~> 3.4.1'
 gem 'es5-shim-rails', '~> 4.0.1'
 
 group :development, :test do
+
+  gem 'better_errors', '~> 2.1.1'
   # Allows you to read environment variables from a .env file
   gem 'dotenv-rails', '~> 2.0.1'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
