@@ -1,5 +1,6 @@
 .vagrant
 public/assets
+public/system
 tmp
 doc
 log
