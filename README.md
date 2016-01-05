@@ -4,25 +4,28 @@ Rails-starter
 
 A framework for a new rails 4.2.0/ruby 2.2 project for setting up the development environment.
 
-##Local Setup
-- Make sure you have an environment variable set up on your host machine which sets RAILS_ENV to development.
-- Create an .env file with the following contents within your application directory (Update the port, username and password in accordance with your local database setup)
+### Setup
 
-        #MYSQL
-        MYSQL_DATABASE=YOURAPPNAME_development
-        MYSQL_USER=root
-        MYSQL_PASS=root
-        MYSQL_HOSTNAME=127.0.0.1
-        MYSQL_PORT=8889
-        SECRET_KEY_BASE=MAKE_SOMETHING_UP
+1. Make sure you have an `RAILS_ENV` environment variable set on your machine and have it set to 'development'.
 
-- Be sure to include 'bundle exec' before any rails commands, etc.
+2. Install your packages by running `bundle install`.
 
-- Be sure to run `bundle exec rake db:create` and `bundle exec rake db:migrate`
+3. Make sure you will need to have Mysql installed.
 
-##Running the rails server
+4. Create the database with `bundle exec rake db:create`
 
-`bundle exec rails s`
+5. You can override any environment variables such as the mysql port with a dotenv file if you wish. [Read more](https://github.com/bkeepers/dotenv)
 
-##Testing
-- See https://github.com/rspec/rspec-rails for the basics.
+### Development
+
+1. Start your mysql server
+
+2. use `bundle exec rails s` to run the web server.
+
+### Testing:
+
+Tests are written using rspec. You can run tests with the following:
+
+  	bundle exec rspec
+
+  See https://github.com/rspec/rspec-rails for the basics.

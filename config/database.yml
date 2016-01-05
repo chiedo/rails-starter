@@ -10,11 +10,11 @@ development:
   <<: *default
   # Database was not set as an environment variable so you could have multiple projects on the same server locally
   # No harm in hard coding the database name in each project for development purposes.
-  database: <%= ENV["MYSQL_DATABASE"] %>
-  username: <%= ENV["MYSQL_USER"] %>
-  password: <%= ENV["MYSQL_PASS"] %>
-  host: <%= ENV["MYSQL_HOSTNAME"] %>
-  port: <%= ENV["MYSQL_PORT"] %>
+  database: <%= ENV["MYSQL_DATABASE"] ? ENV["MYSQL_DATABASE"] : 'rails-starter'  %>
+  username: <%= ENV["MYSQL_USER"] ? ENV["MYSQL_USER"] : 'root' %>
+  password: <%= ENV["MYSQL_PASS"] ? ENV["MYSQL_PASS"] : 'root' %>
+  host: <%= ENV["MYSQL_HOSTNAME"] ? ENV["MYSQL_HOSTNAME"] : '127.0.0.1' %>
+  port: <%= ENV["MYSQL_PORT"] ? ENV["MYSQL_PORT"] : '3306' %>
 
 #test:
   #<<: *default
