@@ -1,6 +1,6 @@
 Rails-starter
 =========
-<img src="https://travis-ci.org/chiedojohn/rails-starter.svg?branch=master" />
+No longer maintained in favor of <a href="https://github.com/chiedo/rails-api-starter" target="_blank">Rails API Starter</a>
 
 A framework for a new rails 4.2.0/ruby 2.2 project for setting up the development environment.
 
